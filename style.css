@@ -9,8 +9,9 @@ body{
     border-width: 5px;
     border-style:solid;
     border-color: black;
+    
     border-radius: 10px;
-    box-shadow: 5px 15px 35px greenyellow;
+    box-shadow: 5px 15px 35px purple;
 }
 #header h1{
     margin-top: 10px;
@@ -22,7 +23,8 @@ body{
     margin-top: 10px;
 }
 #song{
-    background-color: greenyellow;
+    color: white;
+    background-color: purple;
     width: 300px;
     height: 40px;
     border-width: 5px;
@@ -36,5 +38,5 @@ canvas{
     border-style:solid;
     border-color: yellow;
     border-radius: 10px;
-    box-shadow: 35px 35px 30px green;
+    box-shadow: 35px 35px 30px purple;
 }
