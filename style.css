@@ -1,6 +1,7 @@
 body{
     background-image: url(background.jpg);
     font-family: 'Fredoka One', cursive;
+    background-size: cover;
 }
 #header{
     background-color: yellow;

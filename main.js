@@ -1,13 +1,13 @@
 SongA="";
 SongB="";
-LeftWristY="";
-LeftWristX="";
+leftWristY="";
+leftWristX="";
 RightWristY="";
 RightWristX="";
 
 function preload(){
     SongA=loadSound("one_song.mp3")
-    SongB=loadSound("one_song.mp3")
+    SongB=loadSound("two_song.mp3")
 }
 
 function setup(){
@@ -18,6 +18,7 @@ video.hide();
 posenet=ml5.poseNet(video,modelLoaded);
 console.log(ml5.version);
 posenet.on("pose", getposes);
+
 };
 function modelLoaded(){
     console.log("loaded")
@@ -34,9 +35,15 @@ function modelLoaded(){
             rightWristX=result[0].pose.rightWrist.x;
             console.log(rightWristY);
             console.log(rightWristX);
+            Lscore=result[0].pose.keypoints[9].score;
+            console.log(Lscore);
+            SongA.stop();
         }
     }
 
 function draw(){
 image(video,0,0,400,350)
+SongA.play();
+fill("purple")
+circle(leftWristX, leftWristY, 50)
 };
